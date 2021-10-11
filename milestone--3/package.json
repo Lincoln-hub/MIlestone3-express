@@ -1,0 +1,42 @@
+{
+  "name": "milestone--3",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon -e js,ts --watch ./index.js --watch app --ignore 'lib/*' --exec \"npm run build && node ./index.js\" ",
+    "debug": "nodemon -e js,ts --watch ./index.js --watch app --ignore 'lib/*' --exec 'npm run build && node --inspect ./index.js' ",
+    "build": "babel app --out-dir lib/app --extensions \".ts,.tsx\" --source-maps inline"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "^4.16.4",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.13"
+  },
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/node": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-typescript": "^7.1.0",
+    "@babel/runtime": "^7.2.0",
+    "@types/mysql": "^2.15.19",
+    "@types/node": "^16.10.3",
+    "typescript": "^3.2.2"
+  }
+}
